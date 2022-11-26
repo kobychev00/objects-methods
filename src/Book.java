@@ -25,6 +25,10 @@ public class Book {
         this.yearPublish = yearPublish;
     }
 
+    public String toString() {
+        return "Название " + this.header + " Год публикации " + this.yearPublish;
+    }
+
     public boolean equals(Object other) {
         if (this.getClass() != other.getClass()) {
             return false;

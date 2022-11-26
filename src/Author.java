@@ -15,6 +15,18 @@ public class Author {
         return this.secondName;
     }
 
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Author authorPuskin = (Author) other;
+        return secondName.equals(authorPuskin);
+    }
+
+    public int hashCode() {
+        return java.util.Objects.hash(secondName);
+    }
+
     public String toString() {
         return "Имя " + this.firstName + " Фамилия " + this.secondName;
     }
